@@ -1,16 +1,17 @@
 # docker-example
 Shows how to create a spring boot application + mysql
 
-Compiling the project:
-mvn clean install
+**Compiling the project:**
 
-Create MySQL
- docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:8.0
+- mvn clean install
 
-Build image
-docker build -t user/app .
+**Create MySQL**
+ - docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:8.0
 
-Run container
-docker run -t --name user_app --link mysql:mysql -p 8080:8080 user/app
+**Build image**
+- docker build -t user/app .
+
+**Run container**
+- docker run -t --name user_app --link mysql:mysql -p 8080:8080 user/app
 
 
